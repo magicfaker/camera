@@ -33,8 +33,6 @@
         </div>
       </flexbox-item>
     </flexbox>
-
-    <tabbar></tabbar>
   </div>
 </template>
 
@@ -50,7 +48,6 @@ import {
   XButton,
   ViewBox,
 } from "vux";
-import tabbar from "./../components/Tabbar";
 import listnew from "./../components/Listnew";
 
 export default {
@@ -68,7 +65,6 @@ export default {
     };
   },
   components: {
-    tabbar,
     XHeader,
     TabbarItem,
     Group,
@@ -151,7 +147,7 @@ export default {
   .computed_b {
     background: #fff;
     position: fixed;
-    bottom: 53px;
+    bottom: 0;
     padding: 10px 0;
     box-shadow: 0px 0px 5px #e0e0e0;
     right: 0;

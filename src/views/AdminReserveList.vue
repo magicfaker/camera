@@ -77,8 +77,6 @@
         </div>
       </flexbox-item>
     </flexbox>
-
-    <tabbar></tabbar>
   </div>
 </template>
 
@@ -95,7 +93,6 @@ import {
   ViewBox,
   Confirm,
 } from "vux";
-import tabbar from "./../components/Tabbar";
 import AdminHistoryDetail from "./../components/AdminHistoryDetail";
 
 export default {
@@ -111,7 +108,6 @@ export default {
     };
   },
   components: {
-    tabbar,
     XHeader,
     TabbarItem,
     Group,
@@ -250,7 +246,7 @@ export default {
   .computed_b {
     background: #fff;
     position: fixed;
-    bottom: 3.4rem;
+    bottom: 0;
     padding: 10px 0;
     box-shadow: 0px 0px 5px #e0e0e0;
     right: 0;

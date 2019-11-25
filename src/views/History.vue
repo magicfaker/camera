@@ -1,5 +1,5 @@
 <template>
-  <div class="history">
+  <div class="history" style="height:100%;">
     <button-tab class="header_tab">
       <button-tab-item selected @on-item-click="returned()">全部</button-tab-item>
       <button-tab-item @on-item-click="returned(0)">未受理</button-tab-item>
