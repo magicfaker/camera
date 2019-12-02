@@ -1,5 +1,5 @@
 <template>
-  <div class="shop">
+  <div class="shop" style="height:100%">
     <div class="content">
       <flexbox :gutter="16">
         <flexbox-item :span="2">
@@ -37,7 +37,7 @@
           </div>
         </flexbox-item>
       </flexbox>
-      <view-box ref="viewBox">
+      <view-box style="margin-bottom:3rem">
         <flexbox v-for="item in shopList" :key="item.id">
           <flexbox-item :span="3">
             <div class="flex-demo left_img">
@@ -254,7 +254,7 @@ export default {
     .computed_b {
       background: #fff;
       position: fixed;
-      bottom: 3.4rem;
+      bottom: 3.1rem;
       padding: 10px 0;
       box-shadow: 0px 0px 5px #e0e0e0;
       right: 0;

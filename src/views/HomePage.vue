@@ -1,5 +1,5 @@
 <template >
-  <div class="tab-content">
+  <div class="tab-content" style="height:100%">
     <flexbox>
       <flexbox-item :span="1">
         <div class="flex-demo">
@@ -32,23 +32,23 @@
       </flexbox-item>
       <flexbox-item>
         <div class="flex-demo">
-            <scroller lock-y :scrollbar-x=false>
-              <div class="box1">
-          <checker
-            v-model="demo5"
-            default-item-class="demo5-item"
-            selected-item-class="demo5-item-selected"
-            :radio-required="true"
-          >
-            <checker-item
-              @on-item-click="click1(index1)"
-              v-for="(item1,index1) in list2"
-              :key="item1.deviceParentClassId"
-              :value="index1"
-            >{{item1.deviceParentClassName}}</checker-item>
-          </checker>
-          </div>
-            </scroller>
+          <scroller lock-y :scrollbar-x="false">
+            <div class="box1">
+              <checker
+                v-model="demo5"
+                default-item-class="demo5-item"
+                selected-item-class="demo5-item-selected"
+                :radio-required="true"
+              >
+                <checker-item
+                  @on-item-click="click1(index1)"
+                  v-for="(item1,index1) in list2"
+                  :key="item1.deviceParentClassId"
+                  :value="index1"
+                >{{item1.deviceParentClassName}}</checker-item>
+              </checker>
+            </div>
+          </scroller>
         </div>
       </flexbox-item>
     </flexbox>
@@ -60,10 +60,10 @@
         :selected="index2===indexSeleted"
       >{{item2.deviceClassName}}</tab-item>
     </tab>
-    <view-box>
+    <view-box style="height:86.4%">
       <list :listdata="listdata"></list>
     </view-box>
-     <tabbar></tabbar>
+    <tabbar></tabbar>
   </div>
 </template>
 <script>
@@ -85,7 +85,7 @@ import {
   Checker,
   CheckerItem,
   ViewBox,
-  Scroller 
+  Scroller
 } from "vux";
 import list from "./../components/List";
 import tabbar from "./../components/Tabbar";
@@ -102,7 +102,7 @@ export default {
       list4: "",
       demo5: 0,
       demo4: 0,
-      indexSeleted: 0,
+      indexSeleted: 0
     };
   },
   components: {
@@ -122,7 +122,7 @@ export default {
     Checker,
     CheckerItem,
     ViewBox,
-    Scroller 
+    Scroller
   },
   created() {
     this.getList();
@@ -183,7 +183,7 @@ export default {
 
   //       right: 78% !important;
   //       height: 100px;
-  
+
   // }
   .screen_left {
     text-align: right;
@@ -227,8 +227,8 @@ export default {
     color: #fff;
   }
   .box1 {
-  position: relative;
-  width: 32rem;
-}
+    position: relative;
+    width: 32rem;
+  }
 }
 </style>

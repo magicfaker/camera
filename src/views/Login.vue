@@ -29,9 +29,9 @@ export default {
       //取得整个地址栏
       var str = location.href;
       let res = await this.$Http.getUserInfoData({
-        // code: this.id
+        code: this.id
         // code: "18090044"
-        code: "19090098"
+        // code: "19090098"
       })
       if (res.code == "0") {
         sessionStorage.setItem("role", res.data.role);

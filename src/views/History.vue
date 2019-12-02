@@ -9,9 +9,9 @@
       <button-tab-item @on-item-click="returned(6)">已关闭</button-tab-item>
       <button-tab-item @on-item-click="returned(5)">已撤销</button-tab-item>
     </button-tab>
-     <view-box ref="viewBox">
-    <card class="card" :orderList1="orderList1"></card>
-     </view-box>
+    <view-box style="height:95.4%">
+      <card class="card" :orderList1="orderList1"></card>
+    </view-box>
     <tabbar></tabbar>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
   name: "history",
   data() {
     return {
-      orderList1: "",
+      orderList1: ""
     };
   },
   components: {
@@ -56,10 +56,10 @@ export default {
       let res = await this.$Http.getOrderListData({
         state: stateId,
         userid: sessionStorage.getItem("userid")
-      })
-      sessionStorage.setItem('index1', stateId);
+      });
+      sessionStorage.setItem("index1", stateId);
       this.orderList1 = res.data;
-      console.log(this.index1)
+      console.log(this.index1);
     }
   }
 };
